@@ -1,0 +1,88 @@
+.showcase-container {
+    position: relative;
+}
+
+.showcase-container .next,
+.showcase-container .prev {
+    cursor: pointer;
+    color: #FFF;
+    opacity: 0;
+    font-size: 44px;
+    position: absolute;
+    top: 50%;
+    z-index: 1000;
+    text-shadow: 0 0 6px rgba(0,0,0,.65);
+
+    transition: all 250ms ease-in-out 0ms;
+    -webkit-transition: all 250ms ease-in-out 0ms;
+}
+.showcase-container .prev {
+    background: url('/wp-content/themes/gc14/img/icon-chevron-left.png');
+    background-size: 36px 36px;
+    width: 36px;
+    height: 36px;
+    margin-left: 20px;
+    left: 0;
+}
+.showcase-container .next {
+    background: url('/wp-content/themes/gc14/img/icon-chevron-right.png');
+    background-size: 36px 36px;
+    width: 36px;
+    height: 36px;
+    margin-right: 20px;
+    right: 0;
+}
+.showcase-container:hover .prev {
+    margin-left: 0;
+    opacity: 1;
+}
+.showcase-container:hover .next {
+    margin-right: 0;
+    opacity: 1;
+}
+
+.showcase-container nav {
+    position: relative;
+    z-index: 1000;
+    text-align: center;
+    margin: 12px 0;
+    margin-top: -30px;
+    padding-bottom: 12px;
+}
+.showcase-container nav span {
+    background: url('/wp-content/themes/gc14/img/pager.png') no-repeat 0 100%;
+    margin: 0 4px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.showcase-container nav span.active {
+    background-position-y: 0;
+}
+
+.slides {
+    width: 100%;
+    position: relative;
+    height: 500px;
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    list-style-position: inside;
+}
+.slides li{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    display: list-item;
+    z-index: 2;
+    height: 500px;
+    width: 1254px;
+    opacity: 0;
+
+    transition: all 1500ms ease-in-out 0ms;
+    -webkit-transition: all 1500ms ease-in-out 0ms;
+
+    -webkit-transform: initial;
+}
